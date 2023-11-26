@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".Services">
+
+    <Button
+        android:id="@+id/btn_v_s_plumbing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0.5"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <Button
+        android:id="@+id/btn_v_s_electrical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0.5"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_plumbing"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_plumbing" />
+
+    <Button
+        android:id="@+id/btn_v_s_hvac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0.5"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_flooring"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_flooring" />
+
+    <Button
+        android:id="@+id/btn_v_s_flooring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0.5"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_electrical"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_electrical" />
+
+    <Button
+        android:id="@+id/btn_v_s_paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0.5"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_hvac"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_hvac" />
+
+    <Button
+        android:id="@+id/btn_v_s_carpentry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0.5"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_paint"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_paint" />
+
+    <Button
+        android:id="@+id/btn_v_s_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0.5"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_carpentry"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_carpentry" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/handyman_logo" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="415dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tape_measure" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="62dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
