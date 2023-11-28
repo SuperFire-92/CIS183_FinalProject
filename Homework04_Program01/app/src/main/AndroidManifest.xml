@@ -16,13 +16,13 @@
             android:name=".HandymanSelection"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Services"
             android:exported="false" />
         <activity
             android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".Services"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
