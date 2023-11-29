@@ -1,12 +1,12 @@
 create table if not exists users(
-  username varchar(255) not null,
+  email varchar(255) not null,
   password varchar(255),
-  fName varchar(255),
-  lName varchar(255),
+  name varchar(255),
   address varchar(255),
-  email varchar(255),
+  phoneNumber varchar(255),
+  description varchar(1000),
   isHandyman boolean,
-  primary key (username)
+  primary key (email)
   );
 
 create table if not exists jobs(
@@ -42,8 +42,8 @@ create table if not exists handymanReviews(
   );
 
 
-insert into users values ('ndyk','password','Nick','Dyk','123 Imaginary Road Basket, Michigan','nickdyk@email.com',true);
-insert into users values ('ldyk','p123','Luke','Dyk','124 Imaginary Road Basket, Michigan','lukedyk@email.com',false);
+insert into users values ('ndyk@email.com','password','Nick Dyk','123 Imaginary Road Basket, Michigan','(419)-343-2176',true);
+insert into users values ('ldyk@email.com','p123','Luke Dyk','124 Imaginary Road Basket, Michigan','(419)-213-8876',false);
 
 insert into jobs (jobName) values ('Plumbing');
 insert into jobs (jobName) values ('Electrical');
@@ -53,15 +53,15 @@ insert into jobs (jobName) values ('Paint');
 insert into jobs (jobName) values ('Carpentry');
 insert into jobs (jobName) values ('Other');
 
-insert into handymanJobs (username, jobId) values ('ndyk', 1);
-insert into handymanJobs (username, jobId) values ('ndyk', 3);
-insert into handymanJobs (username, jobId) values ('ndyk', 6);
+insert into handymanJobs (username, jobId) values ('ndyk@email.com', 1);
+insert into handymanJobs (username, jobId) values ('ndyk@email.com', 3);
+insert into handymanJobs (username, jobId) values ('ndyk@email.com', 6);
 
-insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk', 'ldyk', 1);
-insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk', 'ldyk', 3);
+insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk@email.com', 'ldyk@email.com', 1);
+insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk@email.com', 'ldyk@email.com', 3);
 
-insert into handymanReviews (username, review, rating) values ('ndyk','Bad job.',3);
-insert into handymanReviews (username, review, rating) values ('ndyk','good stuff!',5);
+insert into handymanReviews (username, review, rating) values ('ndyk@email.com','Bad job.',3);
+insert into handymanReviews (username, review, rating) values ('ndyk@email.com','good stuff!',5);
 
 ==============================================================
 QUERIES

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 //          HANDYMAN APP
 //================================
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn_j_m_signUp;
     Button btn_j_m_signIn;
-    EditText et_j_m_username;
+    EditText et_j_m_email;
     EditText et_j_m_password;
 
     Intent int_j_signUp;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btn_j_m_signUp  = findViewById(R.id.btn_v_m_signUp);
         btn_j_m_signIn  = findViewById(R.id.btn_v_m_signIn);
-        et_j_m_username    = findViewById(R.id.et_v_m_email);
+        et_j_m_email = findViewById(R.id.et_v_m_email);
         et_j_m_password = findViewById(R.id.et_v_m_password);
 
         int_j_signUp    = new Intent(MainActivity.this, SignUp.class);
@@ -55,26 +56,34 @@ public class MainActivity extends AppCompatActivity {
         btn_j_m_signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String typedUsername, typedPassword;
-                typedUsername = et_j_m_username.getText().toString();
+                String typedEmail, typedPassword;
+                typedEmail = et_j_m_email.getText().toString();
                 typedPassword = et_j_m_password.getText().toString();
 
-                User user = dbHelper.getUser(typedUsername);
+                User user = dbHelper.getUser(typedEmail);
 
-                //Make sure the user entered a valid username and password
-                if (user.getUsername().toString().equals(typedUsername) && user.getPassword().toString().equals(typedPassword))
+                if (user.getEmail() != null)
                 {
-                    //Set the username to be stored in the LoginInfo
-                    LoginInfo.setUsername(user.getUsername());
+                    //Make sure the user entered a valid username and password
+                    if (user.getEmail().toString().equals(typedEmail) && user.getPassword().toString().equals(typedPassword))
+                    {
+                        //Set the username to be stored in the LoginInfo
+                        LoginInfo.setUser(user);
 
-                    if (user.isHandyman())
-                    {
-                        //Go to the handyman's profile
+                        if (user.isHandyman())
+                        {
+                            //Go to the handyman's profile
+                        }
+                        else
+                        {
+                            startActivity(int_j_services);
+                        }
                     }
-                    else
-                    {
-                        startActivity(int_j_services);
-                    }
+                }
+                else
+                {
+                    Log.d("Test","Test");
+                    Toast.makeText(MainActivity.this, "Username or Password is Incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
         });

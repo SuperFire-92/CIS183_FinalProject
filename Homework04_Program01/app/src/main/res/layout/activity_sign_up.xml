@@ -7,6 +7,128 @@
     tools:context=".SignUp"
     android:background="@drawable/gradient_background">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/logo_handyman" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="415dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tape_measure" />
+
+    <ImageView
+        android:id="@+id/image_v_hs_home2"
+        android:layout_width="62dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_button" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="384dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_name"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_name"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_name"
+        app:layout_constraintTop_toTopOf="@+id/et_v_su_name"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="384dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_address"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_address"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_address"
+        app:layout_constraintTop_toTopOf="@+id/et_v_su_address"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="384dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_phone"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_phone"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_phone"
+        app:layout_constraintTop_toTopOf="@+id/et_v_su_phone"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="384dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_email"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_email"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_email"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="384dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_password"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_password"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_password"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="121dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_city"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_city"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_city"
+        app:layout_constraintTop_toTopOf="@+id/et_v_su_city"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sign_in_blank_small" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="121dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_state"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_state"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_state"
+        app:layout_constraintTop_toTopOf="@+id/et_v_su_city"
+        app:srcCompat="@drawable/sign_in_blank_small" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="121dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_zipcode"
+        app:layout_constraintEnd_toEndOf="@+id/et_v_su_zipcode"
+        app:layout_constraintStart_toStartOf="@+id/et_v_su_zipcode"
+        app:layout_constraintTop_toTopOf="@+id/et_v_su_zipcode"
+        app:srcCompat="@drawable/sign_in_blank_small" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_su_signIn"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_su_signIn"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_su_signIn"
+        app:layout_constraintTop_toTopOf="@+id/btn_v_su_signIn"
+        app:srcCompat="@drawable/sign_in_button" />
+
     <EditText
         android:id="@+id/et_v_su_name"
         android:layout_width="wrap_content"
@@ -23,6 +145,7 @@
         android:layout_height="wrap_content"
         android:width="360dp"
         android:ems="10"
+        android:fontFamily="@font/metrophobic"
         android:hint="Street"
         android:inputType="text"
         android:textAlignment="center"
@@ -32,38 +155,44 @@
     <EditText
         android:id="@+id/et_v_su_city"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginEnd="12dp"
         android:width="120dp"
         android:ems="10"
+        android:fontFamily="@font/metrophobic"
         android:hint="City"
         android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@+id/et_v_su_state"
-        app:layout_constraintStart_toStartOf="@+id/et_v_su_address" />
+        app:layout_constraintBottom_toBottomOf="@+id/et_v_su_state"
+        app:layout_constraintEnd_toStartOf="@+id/et_v_su_state" />
 
     <EditText
         android:id="@+id/et_v_su_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="20dp"
         android:width="120dp"
         android:ems="10"
+        android:fontFamily="@font/metrophobic"
         android:hint="State"
         android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@+id/et_v_su_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_v_su_address" />
 
     <EditText
         android:id="@+id/et_v_su_zipcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:width="120dp"
         android:ems="10"
+        android:fontFamily="@font/metrophobic"
         android:hint="Zip"
         android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintBaseline_toBaselineOf="@+id/et_v_su_state"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView20"
         app:layout_constraintStart_toEndOf="@+id/et_v_su_state" />
 
     <EditText
@@ -72,6 +201,7 @@
         android:layout_height="wrap_content"
         android:width="360dp"
         android:ems="10"
+        android:fontFamily="@font/metrophobic"
         android:hint="(xxx)xxx-xxxx"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -81,10 +211,11 @@
         android:id="@+id/et_v_su_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:width="360dp"
         android:ems="10"
+        android:fontFamily="@font/metrophobic"
         android:hint="Email"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,10 +225,11 @@
         android:id="@+id/et_v_su_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:width="360dp"
         android:ems="10"
+        android:fontFamily="@font/metrophobic"
         android:hint="Password"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,30 +239,22 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/bebas_neue"
         android:text="Name"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="CREATE AN ACCOUNT"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bebas_neue"
         android:text="Address"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/et_v_su_name"
         app:layout_constraintTop_toBottomOf="@+id/et_v_su_name" />
 
@@ -138,9 +262,11 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bebas_neue"
         android:text="Phone #"
-        app:layout_constraintStart_toStartOf="@+id/et_v_su_city"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/et_v_su_city" />
 
     <Button
@@ -150,6 +276,7 @@
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="16dp"
         android:width="120sp"
+        android:alpha="0"
         android:text="SIGN IN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -164,4 +291,16 @@
         android:text="BACK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_su_isHandyman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Handyman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_v_su_password" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

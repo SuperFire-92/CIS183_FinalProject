@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     public DatabaseHelper(Context context)
     {
-        super(context,DATABASE_NAME,null,3);
+        super(context,DATABASE_NAME,null,6);
     }
 
     @Override
@@ -26,14 +26,14 @@ public class DatabaseHelper extends SQLiteOpenHelper
         //Create the Users table
         statement = "create table if not exists " +
                 TABLE_NAME_USERS + "( " +
-                "username varchar(255) not null, " +
+                "email varchar(255) not null, " +
                 "password varchar(255), " +
-                "fName varchar(255), " +
-                "lName varchar(255), " +
+                "name varchar(255), " +
                 "address varchar(255), " +
-                "email varchar(255), " +
+                "phoneNumber varchar(255), " +
+                "description varchar(1000)," +
                 "isHandyman boolean, " +
-                "primary key (username)" +
+                "primary key (email)" +
                 ");";
         db.execSQL(statement);
 
@@ -82,21 +82,21 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL(statement);
 
         //Filling up with test values
-        db.execSQL("insert into users values ('ndyk','password','Nick','Dyk','123 Imaginary Road Basket, Michigan','nickdyk@email.com',true);");
-        db.execSQL("insert into users values ('ldyk','p123','Luke','Dyk','124 Imaginary Road Basket, Michigan','lukedyk@email.com',false);");
+        db.execSQL("insert into users values ('ndyk@email.com','password','Nick Dyk','123 Imaginary Road Basket, Michigan','(419)-343-2176','',true);");
+        db.execSQL("insert into users values ('ldyk@email.com','p123','Luke Dyk','124 Imaginary Road Basket, Michigan','(419)-213-8876','',false);");
 
         //Fill up with jobs (this code should remain unchanged
         fillWithJobs(db);
 
-        db.execSQL("insert into handymanJobs (username, jobId) values ('ndyk', 1);");
-        db.execSQL("insert into handymanJobs (username, jobId) values ('ndyk', 3);");
-        db.execSQL("insert into handymanJobs (username, jobId) values ('ndyk', 6);");
+        db.execSQL("insert into handymanJobs (username, jobId) values ('ndyk@email.com', 1);");
+        db.execSQL("insert into handymanJobs (username, jobId) values ('ndyk@email.com', 3);");
+        db.execSQL("insert into handymanJobs (username, jobId) values ('ndyk@email.com', 6);");
 
-        db.execSQL("insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk', 'ldyk', 1);");
-        db.execSQL("insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk', 'ldyk', 3);");
+        db.execSQL("insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk@email.com', 'ldyk@email.com', 1);");
+        db.execSQL("insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk@email.com', 'ldyk@email.com', 3);");
 
-        db.execSQL("insert into handymanReviews (username, review, rating) values ('ndyk','Bad job.',3);");
-        db.execSQL("insert into handymanReviews (username, review, rating) values ('ndyk','good stuff!',5);");
+        db.execSQL("insert into handymanReviews (username, review, rating) values ('ndyk@email.com','Bad job.',3);");
+        db.execSQL("insert into handymanReviews (username, review, rating) values ('ndyk@email.com','good stuff!',5);");
     }
 
     @Override
@@ -136,33 +136,33 @@ public class DatabaseHelper extends SQLiteOpenHelper
     }
 
     @SuppressLint("Range")
-    public User getUser(String u)
+    public User getUser(String e)
     {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String query = "SELECT * FROM " + TABLE_NAME_USERS + " WHERE " + TABLE_NAME_USERS + ".username = '" + u + "';";
+        String query = "SELECT * FROM " + TABLE_NAME_USERS + " WHERE " + TABLE_NAME_USERS + ".email = '" + e + "';";
 
         Cursor cursor = db.rawQuery(query, null);
 
-        String username;
-        String password;
-        String fName;
-        String lName;
-        String address;
         String email;
+        String password;
+        String name;
+        String address;
+        String phoneNumber;
+        String description;
         Boolean isHandyman;
 
         if (cursor.moveToFirst())
         {
-            username = cursor.getString(cursor.getColumnIndex("username"));
+            email = cursor.getString(cursor.getColumnIndex("email"));
             password = cursor.getString(cursor.getColumnIndex("password"));
-            fName    = cursor.getString(cursor.getColumnIndex("fName"));
-            lName    = cursor.getString(cursor.getColumnIndex("lName"));
+            name    = cursor.getString(cursor.getColumnIndex("name"));
             address  = cursor.getString(cursor.getColumnIndex("address"));
-            email    = cursor.getString(cursor.getColumnIndex("email"));
+            phoneNumber    = cursor.getString(cursor.getColumnIndex("phoneNumber"));
+            description = cursor.getString(cursor.getColumnIndex("description"));
             isHandyman = cursor.getColumnIndex("isHandyman") == 1;
 
-            User user = new User(username,password,fName,lName,address,email,isHandyman);
+            User user = new User(email,password,name,address,phoneNumber,description,isHandyman);
 
             db.close();
 
@@ -172,5 +172,36 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.close();
 
         return new User();
+    }
+
+    public void addUser(User u)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String statement = "insert into users values(" +
+                " '" + u.getEmail() + "'," +
+                " '" + u.getPassword() + "'," +
+                " '" + u.getName() + "'," +
+                " '" + u.getAddress() + "'," +
+                " '" + u.getPhoneNumber() + "'," +
+                " '" + u.getDescription() + "'," +
+                " " + u.isHandyman() +
+                " );";
+        db.execSQL(statement);
+    }
+
+    public boolean checkIfEmailFree(User u)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String query = "SELECT * FROM " + TABLE_NAME_USERS + " WHERE " + TABLE_NAME_USERS + ".email = '" + u.getEmail() + "';";
+
+        Cursor cursor = db.rawQuery(query,null);
+
+        if (cursor.moveToFirst())
+        {
+            return false;
+        }
+        return true;
     }
 }

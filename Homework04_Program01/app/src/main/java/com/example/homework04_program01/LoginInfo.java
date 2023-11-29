@@ -2,13 +2,13 @@ package com.example.homework04_program01;
 
 public class LoginInfo
 {
-    private static String username;
+    private static User user;
 
-    public static String getUsername() {
-        return username;
+    public static User getUser() {
+        return user;
     }
 
-    public static void setUsername(String u) {
-        username = u;
+    public static void setUser(User user) {
+        LoginInfo.user = user;
     }
 }

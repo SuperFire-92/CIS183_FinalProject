@@ -2,12 +2,13 @@ package com.example.homework04_program01;
 
 public class User
 {
-    private String username;
-    private String password;
-    private String fName;
-    private String lName;
-    private String address;
     private String email;
+    private String password;
+    private String name;
+    private String address;
+    private String phoneNumber;
+    private String description;
+
     private boolean isHandyman;
 
     User()
@@ -15,81 +16,81 @@ public class User
 
     }
 
-    User(String u, String p, String f, String l, String a, String e, boolean h)
+    User(String e, String p, String n, String a, String pN, String d, boolean h)
     {
-        username = u;
-        password = p;
-        fName = f;
-        lName = l;
-        address = a;
         email = e;
+        password = p;
+        name = n;
+        address = a;
+        phoneNumber = pN;
+        description = d;
         isHandyman = h;
     }
 
-    public void fillUser(String u, String p, String f, String l, String a, String e, boolean h)
+    public void fillUser(String e, String p, String n, String a, String pN, String d, boolean h)
     {
-        username = u;
-        password = p;
-        fName = f;
-        lName = l;
-        address = a;
         email = e;
-        isHandyman = h;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String u) {
-        username = u;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String p) {
         password = p;
-    }
-
-    public String getfName() {
-        return fName;
-    }
-
-    public void setfName(String f) {
-        fName = f;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String l) {
-        lName = l;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String a) {
+        name = n;
         address = a;
+        phoneNumber = pN;
+        description = d;
+        isHandyman = h;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String e) {
-        email = e;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public boolean isHandyman() {
         return isHandyman;
     }
 
-    public void setHandyman(boolean h) {
-        isHandyman = h;
+    public void setHandyman(boolean handyman) {
+        isHandyman = handyman;
     }
 }

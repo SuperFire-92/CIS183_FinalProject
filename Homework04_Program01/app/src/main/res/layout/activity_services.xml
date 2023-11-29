@@ -95,7 +95,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.484"
-        app:srcCompat="@drawable/handyman_logo" />
+        app:srcCompat="@drawable/logo_handyman" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -107,7 +107,7 @@
         app:srcCompat="@drawable/tape_measure" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/image_v_s_home"
         android:layout_width="62dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
