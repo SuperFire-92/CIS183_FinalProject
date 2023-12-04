@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     public DatabaseHelper(Context context)
     {
-        super(context,DATABASE_NAME,null,6);
+        super(context,DATABASE_NAME,null,8);
     }
 
     @Override
@@ -74,10 +74,12 @@ public class DatabaseHelper extends SQLiteOpenHelper
         statement = "create table if not exists " +
                 TABLE_NAME_HANDYMAN_REVIEWS + "(" +
                 "  handymanReviewId integer primary key autoincrement," +
-                "  username varchar(255) not null," +
+                "  usernameHandyman varchar(255) not null," +
+                "  usernameCaller varchar(255) not null," +
                 "  review varchar(1000)," +
                 "  rating int," +
-                "  foreign key (username) references users (username)" +
+                "  foreign key (usernameHandyman) references users (username)," +
+                "  foreign key (usernameCaller) references users (username)" +
                 "  );";
         db.execSQL(statement);
 
@@ -95,8 +97,8 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL("insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk@email.com', 'ldyk@email.com', 1);");
         db.execSQL("insert into handymanCalls (usernameHandyman, usernameCaller, jobId) values ('ndyk@email.com', 'ldyk@email.com', 3);");
 
-        db.execSQL("insert into handymanReviews (username, review, rating) values ('ndyk@email.com','Bad job.',3);");
-        db.execSQL("insert into handymanReviews (username, review, rating) values ('ndyk@email.com','good stuff!',5);");
+        db.execSQL("insert into handymanReviews (usernameHandyman, usernameCaller, review, rating) values ('ndyk@email.com','ldyk@email.com','Bad job.',3);");
+        db.execSQL("insert into handymanReviews (usernameHandyman, usernameCaller, review, rating) values ('ndyk@email.com','ldyk@email.com','good stuff!',5);");
     }
 
     @Override

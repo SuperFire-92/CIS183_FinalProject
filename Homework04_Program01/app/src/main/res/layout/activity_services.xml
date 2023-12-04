@@ -7,6 +7,160 @@
     android:background="@drawable/gradient_background"
     tools:context=".Services">
 
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_other"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_other"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_carpentry"
+        app:srcCompat="@drawable/logo_other" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="OTHER"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_other"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_other"
+        app:layout_constraintStart_toEndOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_carpentry" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_carpentry"
+        app:layout_constraintHorizontal_bias=".12"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_carpentry"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_paint"
+        app:srcCompat="@drawable/logo_carpentry" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="CARPENTRY"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_carpentry"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_carpentry"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_paint" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_paint"
+        app:layout_constraintHorizontal_bias=".12"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_paint"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_flooring"
+        app:srcCompat="@drawable/logo_painting" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="PAINT"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_paint"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_paint"
+        app:layout_constraintStart_toEndOf="@+id/imageView26"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_flooring" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_flooring"
+        app:layout_constraintHorizontal_bias=".12"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_flooring"
+        app:layout_constraintTop_toTopOf="@+id/btn_v_s_flooring"
+        app:srcCompat="@drawable/logo_flooring" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="FLOORING"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_flooring"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_flooring"
+        app:layout_constraintStart_toEndOf="@+id/imageView25"
+        app:layout_constraintTop_toTopOf="@+id/btn_v_s_flooring" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_hvac"
+        app:layout_constraintHorizontal_bias=".12"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_hvac"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_electrical"
+        app:srcCompat="@drawable/logo_hvac" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="HVAC"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_v_s_flooring"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_hvac"
+        app:layout_constraintStart_toEndOf="@+id/imageView24"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_electrical" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_plumbing"
+        app:layout_constraintHorizontal_bias=".12"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_plumbing"
+        app:layout_constraintTop_toTopOf="@+id/btn_v_s_plumbing"
+        app:srcCompat="@drawable/logo_plumbing" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="PLUMBING"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_plumbing"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_plumbing"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/btn_v_s_plumbing" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_electrical"
+        app:layout_constraintHorizontal_bias=".12"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_electrical"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_plumbing"
+        app:srcCompat="@drawable/logo_electrical" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue"
+        android:text="ELECTRICAL"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_electrical"
+        app:layout_constraintEnd_toEndOf="@+id/btn_v_s_electrical"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_plumbing" />
+
     <Button
         android:id="@+id/btn_v_s_plumbing"
         android:layout_width="wrap_content"
@@ -14,7 +168,7 @@
         android:layout_marginTop="20dp"
         android:width="350dp"
         android:height="55dp"
-        android:alpha="0.5"
+        android:alpha="0"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,21 +180,10 @@
         android:layout_height="wrap_content"
         android:width="350dp"
         android:height="55dp"
-        android:alpha="0.5"
+        android:alpha="0"
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/btn_v_s_plumbing"
         app:layout_constraintTop_toBottomOf="@+id/btn_v_s_plumbing" />
-
-    <Button
-        android:id="@+id/btn_v_s_hvac"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="350dp"
-        android:height="55dp"
-        android:alpha="0.5"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/btn_v_s_flooring"
-        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_flooring" />
 
     <Button
         android:id="@+id/btn_v_s_flooring"
@@ -48,7 +191,18 @@
         android:layout_height="wrap_content"
         android:width="350dp"
         android:height="55dp"
-        android:alpha="0.5"
+        android:alpha="0"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_hvac"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_hvac" />
+
+    <Button
+        android:id="@+id/btn_v_s_hvac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="350dp"
+        android:height="55dp"
+        android:alpha="0"
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/btn_v_s_electrical"
         app:layout_constraintTop_toBottomOf="@+id/btn_v_s_electrical" />
@@ -59,10 +213,10 @@
         android:layout_height="wrap_content"
         android:width="350dp"
         android:height="55dp"
-        android:alpha="0.5"
+        android:alpha="0"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/btn_v_s_hvac"
-        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_hvac" />
+        app:layout_constraintStart_toStartOf="@+id/btn_v_s_flooring"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_s_flooring" />
 
     <Button
         android:id="@+id/btn_v_s_carpentry"
@@ -70,7 +224,7 @@
         android:layout_height="wrap_content"
         android:width="350dp"
         android:height="55dp"
-        android:alpha="0.5"
+        android:alpha="0"
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/btn_v_s_paint"
         app:layout_constraintTop_toBottomOf="@+id/btn_v_s_paint" />
@@ -81,7 +235,7 @@
         android:layout_height="wrap_content"
         android:width="350dp"
         android:height="55dp"
-        android:alpha="0.5"
+        android:alpha="0"
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/btn_v_s_carpentry"
         app:layout_constraintTop_toBottomOf="@+id/btn_v_s_carpentry" />
@@ -115,5 +269,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/home_button" />
+
+    <ImageView
+        android:id="@+id/image_v_s_logout"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

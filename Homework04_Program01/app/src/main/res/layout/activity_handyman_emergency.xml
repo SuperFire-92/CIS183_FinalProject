@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HandymanEmergency"
+    android:background="@drawable/gradient_background">
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/logo_handyman" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="415dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tape_measure" />
+
+    <ImageView
+        android:id="@+id/image_v_hs_home3"
+        android:layout_width="62dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_button" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="262dp"
+        android:layout_height="474dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/background_handyman_selection" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="206dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:srcCompat="@drawable/button_emergency" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="206dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:srcCompat="@drawable/button_emergency" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView33"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView32"
+        app:srcCompat="@drawable/text_or" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="152dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView32"
+        app:layout_constraintEnd_toEndOf="@+id/imageView32"
+        app:layout_constraintStart_toStartOf="@+id/imageView32"
+        app:layout_constraintTop_toTopOf="@+id/imageView32"
+        app:srcCompat="@drawable/text_schedule_appointment" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="152dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView33"
+        app:layout_constraintEnd_toEndOf="@+id/imageView33"
+        app:layout_constraintStart_toStartOf="@+id/imageView33"
+        app:layout_constraintTop_toTopOf="@+id/imageView33"
+        app:srcCompat="@drawable/text_emergency_appointment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
