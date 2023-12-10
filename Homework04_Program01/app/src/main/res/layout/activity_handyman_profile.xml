@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HandymanProfile"
+    android:background="@drawable/gradient_background">
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/logo_handyman" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="415dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tape_measure" />
+
+    <ImageView
+        android:id="@+id/image_v_hs_home5"
+        android:layout_width="62dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_button" />
+
+    <EditText
+        android:id="@+id/et_v_hp_description"
+        android:layout_width="303dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center|top"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:lines="9"
+        android:maxLines="9"
+        android:minLines="5"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_v_hp_flooring" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_hp_plumbing"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Plumbing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView37" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_hp_paint"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:text="Paint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView37" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_hp_electrical"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
+        android:text="Electrical"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_v_hp_plumbing"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_v_hp_plumbing" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_hp_other"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
+        android:text="Other"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox_v_hp_carpentry"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_v_hp_carpentry" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_hp_hvac"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
+        android:text="HVAC"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_v_hp_electrical"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_v_hp_electrical" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_hp_flooring"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
+        android:text="Flooring"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_v_hp_hvac"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_v_hp_hvac" />
+
+    <CheckBox
+        android:id="@+id/checkBox_v_hp_carpentry"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
+        android:text="Carpentry"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox_v_hp_paint"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_v_hp_paint" />
+
+    <ImageView
+        android:id="@+id/img_v_hp_logout"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_logout" />
+
+    <ImageView
+        android:id="@+id/img_v_hp_apply"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_v_hp_jobs"
+        app:layout_constraintEnd_toEndOf="@+id/img_v_hp_jobs"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/img_v_hp_jobs"
+        app:srcCompat="@drawable/button_apply" />
+
+    <ImageView
+        android:id="@+id/img_v_hp_editInfo"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/button_edit_info" />
+
+    <ImageView
+        android:id="@+id/img_v_hp_jobs"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_jobs" />
+</androidx.constraintlayout.widget.ConstraintLayout>

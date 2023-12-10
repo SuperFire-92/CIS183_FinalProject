@@ -19,9 +19,12 @@ public class Services extends AppCompatActivity {
     Button btn_j_s_carpentry;
     Button btn_j_s_other;
     ImageView btn_j_s_logout;
+    ImageView btn_j_s_editInfo;
 
     Intent int_j_mainActivity;
     Intent int_j_handymanSelection;
+    Intent int_j_editProfile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +38,11 @@ public class Services extends AppCompatActivity {
         btn_j_s_carpentry = findViewById(R.id.btn_v_s_carpentry);
         btn_j_s_other = findViewById(R.id.btn_v_s_other);
         btn_j_s_logout = findViewById(R.id.image_v_s_logout);
+        btn_j_s_editInfo = findViewById(R.id.image_v_s_editInfo);
 
         int_j_mainActivity = new Intent(Services.this, MainActivity.class);
         int_j_handymanSelection = new Intent(Services.this, HandymanSelection.class);
+        int_j_editProfile = new Intent(Services.this, EditProfile.class);
 
         buttonPlumbingEventHandler();
         buttonElectricalEventHandler();
@@ -47,6 +52,7 @@ public class Services extends AppCompatActivity {
         buttonCarpentryEventHandler();
         buttonOtherEventHandler();
         buttonLogoutEventHandler();
+        buttonEditInfoEventHandler();
     }
 
     public void moveIntents(String j)
@@ -62,7 +68,7 @@ public class Services extends AppCompatActivity {
         btn_j_s_plumbing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveIntents("plumbing");
+                moveIntents(DatabaseInfo.getJobPlumbing());
             }
         });
     }
@@ -72,7 +78,7 @@ public class Services extends AppCompatActivity {
         btn_j_s_electrical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveIntents("electrical");
+                moveIntents(DatabaseInfo.getJobElectrical());
             }
         });
     }
@@ -82,7 +88,7 @@ public class Services extends AppCompatActivity {
         btn_j_s_hvac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveIntents("hvac");
+                moveIntents(DatabaseInfo.getJobHvac());
             }
         });
     }
@@ -92,7 +98,7 @@ public class Services extends AppCompatActivity {
         btn_j_s_flooring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveIntents("flooring");
+                moveIntents(DatabaseInfo.getJobFlooring());
             }
         });
     }
@@ -102,7 +108,7 @@ public class Services extends AppCompatActivity {
         btn_j_s_paint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveIntents("paint");
+                moveIntents(DatabaseInfo.getJobPaint());
             }
         });
     }
@@ -112,7 +118,7 @@ public class Services extends AppCompatActivity {
         btn_j_s_carpentry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveIntents("carpentry");
+                moveIntents(DatabaseInfo.getJobCarpentry());
             }
         });
     }
@@ -122,7 +128,7 @@ public class Services extends AppCompatActivity {
         btn_j_s_other.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveIntents("other");
+                moveIntents(DatabaseInfo.getJobOther());
             }
         });
     }
@@ -134,6 +140,16 @@ public class Services extends AppCompatActivity {
             public void onClick(View v) {
                 LoginInfo.setUser(null);
                 startActivity(int_j_mainActivity);
+            }
+        });
+    }
+
+    public void buttonEditInfoEventHandler()
+    {
+        btn_j_s_editInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(int_j_editProfile);
             }
         });
     }

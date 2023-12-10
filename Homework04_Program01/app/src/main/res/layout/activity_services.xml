@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue"
         android:text="OTHER"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_other"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_s_other"
@@ -45,6 +46,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue"
         android:text="CARPENTRY"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_carpentry"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_s_carpentry"
@@ -67,6 +69,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue"
         android:text="PAINT"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_paint"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_s_paint"
@@ -89,6 +92,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue"
         android:text="FLOORING"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_flooring"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_s_flooring"
@@ -111,6 +115,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue"
         android:text="HVAC"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_v_s_flooring"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_s_hvac"
@@ -133,6 +138,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue"
         android:text="PLUMBING"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_plumbing"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_s_plumbing"
@@ -155,6 +161,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bebas_neue"
         android:text="ELECTRICAL"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_s_electrical"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_s_electrical"
@@ -278,6 +285,16 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/button_back" />
+        app:srcCompat="@drawable/button_logout" />
+
+    <ImageView
+        android:id="@+id/image_v_s_editInfo"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/button_edit_info" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

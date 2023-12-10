@@ -7,7 +7,7 @@ create table if not exists users(
   description varchar(1000),
   isHandyman boolean,
   primary key (email)
-  );
+);
 
 create table if not exists jobs(
   jobId integer primary key autoincrement,
@@ -18,7 +18,7 @@ create table if not exists handymanJobs(
   handymanJobId integer primary key autoincrement,
   username varchar(255) not null,
   jobId int not null,
-  foreign key (username) references users (username),
+  foreign key (username) references users (email),
   foreign key (jobId) references jobs (jobId)
   );
 
@@ -28,8 +28,8 @@ create table if not exists handymanCalls(
   usernameCaller varchar(255) not null,
   jobId int not null,
   date datetime default now(),
-  foreign key (usernameHandyman) references users (username),
-  foreign key (usernameCaller) references users (username),
+  foreign key (usernameHandyman) references users (email),
+  foreign key (usernameCaller) references users (email),
   foreign key (jobId) references jobs (jobId)
   );
 
@@ -38,12 +38,15 @@ create table if not exists handymanReviews(
   username varchar(255) not null,
   review varchar(1000),
   rating int,
-  foreign key (username) references users (username)
+  foreign key (username) references users (email)
   );
 
 
-insert into users values ('ndyk@email.com','password','Nick Dyk','123 Imaginary Road Basket, Michigan','(419)-343-2176',true);
-insert into users values ('ldyk@email.com','p123','Luke Dyk','124 Imaginary Road Basket, Michigan','(419)-213-8876',false);
+insert into users values ('ndyk@email.com','password','Nick Dyk','123 Imaginary Road Basket, Michigan','(419)-343-2176','',true);
+insert into users values ('ldyk@email.com','p123','Luke Dyk','124 Imaginary Road Basket, Michigan','(419)-213-8876','',false);
+insert into users values ('jblk@email.com','password','Mason Carpentry','125 Imaginary Road Basket, Michigan','(419)-643-8876','Carpentry :P',true);
+insert into users values ('qwer@email.com','password','Potty John Plumbing','126 Imaginary Road Basket, Michigan','(419)-643-8875','Plumbing :P',true);
+insert into users values ('poiu@email.com','password','Sams HVAC','127 Imaginary Road Basket, Michigan','(419)-643-8874','HVAC :P',true);
 
 insert into jobs (jobName) values ('Plumbing');
 insert into jobs (jobName) values ('Electrical');

@@ -13,7 +13,16 @@
         android:theme="@style/Theme.Homework04_Program01"
         tools:targetApi="31">
         <activity
-            android:name=".HandymanEmergency"
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".HandymanProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ScheduleConfirm"
+            android:exported="false" />
+        <activity
+            android:name=".HandymanEdule"
             android:exported="false" />
         <activity
             android:name=".HandymanSelection"

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".EditProfile">
+
+    <ImageView
+        android:id="@+id/imageView64"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484"
+        app:srcCompat="@drawable/logo_handyman" />
+
+    <ImageView
+        android:id="@+id/imageView65"
+        android:layout_width="415dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tape_measure" />
+
+    <ImageView
+        android:id="@+id/image_v_hs_home9"
+        android:layout_width="62dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_button" />
+
+    <ImageView
+        android:id="@+id/imageView67"
+        android:layout_width="384dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="Name"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView65" />
+
+    <EditText
+        android:id="@+id/et_v_ep_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="360dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView67"
+        app:layout_constraintEnd_toEndOf="@+id/imageView67"
+        app:layout_constraintStart_toStartOf="@+id/imageView67"
+        app:layout_constraintTop_toTopOf="@+id/imageView67" />
+
+    <ImageView
+        android:id="@+id/imageView70"
+        android:layout_width="384dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <EditText
+        android:id="@+id/et_v_ep_street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="360dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView70"
+        app:layout_constraintEnd_toEndOf="@+id/imageView70"
+        app:layout_constraintStart_toStartOf="@+id/imageView70"
+        app:layout_constraintTop_toTopOf="@+id/imageView70"
+        app:layout_constraintVertical_bias=".5" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="ADDRESS"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView67" />
+
+    <ImageView
+        android:id="@+id/imageView75"
+        android:layout_width="384dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <EditText
+        android:id="@+id/et_v_ep_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="360dp"
+        android:ems="10"
+        android:hint="(XXX)-XXX-XXXX"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView75"
+        app:layout_constraintEnd_toEndOf="@+id/imageView75"
+        app:layout_constraintStart_toStartOf="@+id/imageView75"
+        app:layout_constraintTop_toTopOf="@+id/imageView75"
+        app:layout_constraintVertical_bias=".5" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="PHONE #"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView70" />
+
+    <ImageView
+        android:id="@+id/imageView76"
+        android:layout_width="384dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView75"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <ImageView
+        android:id="@+id/imageView77"
+        android:layout_width="384dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView75"
+        app:srcCompat="@drawable/sign_in_blank" />
+
+    <EditText
+        android:id="@+id/et_v_ep_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="360dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        android:password="true"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView77"
+        app:layout_constraintEnd_toEndOf="@+id/imageView77"
+        app:layout_constraintStart_toStartOf="@+id/imageView77"
+        app:layout_constraintTop_toTopOf="@+id/imageView77"
+        app:layout_constraintVertical_bias=".5" />
+
+    <ImageView
+        android:id="@+id/img_v_ep_back"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button_back" />
+
+    <ImageView
+        android:id="@+id/img_j_ep_update"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/button_update" />
+
+    <ImageView
+        android:id="@+id/img_j_ep_delete"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_j_ep_update"
+        app:layout_constraintStart_toEndOf="@+id/img_v_ep_back"
+        app:srcCompat="@drawable/button_delete" />
+
+    <TextView
+        android:id="@+id/tv_v_ep_email"
+        android:layout_width="359dp"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:text="EMAIL"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView76"
+        app:layout_constraintEnd_toEndOf="@+id/imageView76"
+        app:layout_constraintStart_toStartOf="@+id/imageView76"
+        app:layout_constraintTop_toTopOf="@+id/imageView76" />
+</androidx.constraintlayout.widget.ConstraintLayout>

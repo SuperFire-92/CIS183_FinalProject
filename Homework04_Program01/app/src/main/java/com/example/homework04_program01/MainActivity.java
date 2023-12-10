@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     Intent int_j_signUp;
     Intent int_j_services;
+    Intent int_j_handymanProfile;
     DatabaseHelper dbHelper;
 
     @Override
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         int_j_signUp    = new Intent(MainActivity.this, SignUp.class);
         int_j_services  = new Intent(MainActivity.this, Services.class);
+        int_j_handymanProfile = new Intent(MainActivity.this, HandymanProfile.class);
 
         dbHelper        = new DatabaseHelper(this);
 
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         if (user.isHandyman())
                         {
                             //Go to the handyman's profile
+                            startActivity(int_j_handymanProfile);
                         }
                         else
                         {
