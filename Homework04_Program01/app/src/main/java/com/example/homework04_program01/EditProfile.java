@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EditProfile extends AppCompatActivity {
 
@@ -82,13 +83,19 @@ public class EditProfile extends AppCompatActivity {
                         curUser.isHandyman()
                 );
 
-                dbHelper.updateUser(updatedUser);
-                curUser = dbHelper.getUser(updatedUser.getEmail());
+                if (updatedUser.getEmail().equals("") || updatedUser.getPassword().equals("") || updatedUser.getName().equals("") || updatedUser.getAddress().equals("") || updatedUser.getPhoneNumber().equals(""))
+                {
+                    Toast.makeText(EditProfile.this, "All Fields Must Be Filled", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    dbHelper.updateUser(updatedUser);
+                    curUser = dbHelper.getUser(updatedUser.getEmail());
 
-                backToPrevious();
+                    backToPrevious();
+                }
             }
         });
-
     }
 
     public void buttonDeleteEventHandler()
