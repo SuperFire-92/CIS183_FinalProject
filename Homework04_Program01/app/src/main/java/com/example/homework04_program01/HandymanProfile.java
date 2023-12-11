@@ -28,6 +28,7 @@ public class HandymanProfile extends AppCompatActivity {
 
     Intent int_j_mainActivity;
     Intent int_j_editProfile;
+    Intent int_j_handymanCalls;
     DatabaseHelper dbHelper;
     User handyman;
 
@@ -51,6 +52,7 @@ public class HandymanProfile extends AppCompatActivity {
 
         int_j_mainActivity = new Intent(HandymanProfile.this, MainActivity.class);
         int_j_editProfile = new Intent(HandymanProfile.this, EditProfile.class);
+        int_j_handymanCalls = new Intent(HandymanProfile.this, HandymanCalls.class);
 
         dbHelper = new DatabaseHelper(this);
 
@@ -71,6 +73,17 @@ public class HandymanProfile extends AppCompatActivity {
         buttonApplyEventHandler();
         buttonLogoutEventHandler();
         buttonEditInfoEventHandler();
+        buttonJobsEventHandler();
+    }
+
+    public void buttonJobsEventHandler()
+    {
+        img_j_hp_jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(int_j_handymanCalls);
+            }
+        });
     }
 
     public void buttonApplyEventHandler()

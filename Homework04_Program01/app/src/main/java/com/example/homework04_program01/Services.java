@@ -20,10 +20,12 @@ public class Services extends AppCompatActivity {
     Button btn_j_s_other;
     ImageView btn_j_s_logout;
     ImageView btn_j_s_editInfo;
+    ImageView btn_j_s_jobs;
 
     Intent int_j_mainActivity;
     Intent int_j_handymanSelection;
     Intent int_j_editProfile;
+    Intent int_j_handymanCalls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +41,12 @@ public class Services extends AppCompatActivity {
         btn_j_s_other = findViewById(R.id.btn_v_s_other);
         btn_j_s_logout = findViewById(R.id.image_v_s_logout);
         btn_j_s_editInfo = findViewById(R.id.image_v_s_editInfo);
+        btn_j_s_jobs = findViewById(R.id.image_v_s_jobs);
 
         int_j_mainActivity = new Intent(Services.this, MainActivity.class);
         int_j_handymanSelection = new Intent(Services.this, HandymanSelection.class);
         int_j_editProfile = new Intent(Services.this, EditProfile.class);
+        int_j_handymanCalls = new Intent(Services.this, HandymanCalls.class);
 
         buttonPlumbingEventHandler();
         buttonElectricalEventHandler();
@@ -53,6 +57,7 @@ public class Services extends AppCompatActivity {
         buttonOtherEventHandler();
         buttonLogoutEventHandler();
         buttonEditInfoEventHandler();
+        buttonViewCallsEventHandler();
     }
 
     public void moveIntents(String j)
@@ -150,6 +155,16 @@ public class Services extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(int_j_editProfile);
+            }
+        });
+    }
+
+    public void buttonViewCallsEventHandler()
+    {
+        btn_j_s_jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(int_j_handymanCalls);
             }
         });
     }

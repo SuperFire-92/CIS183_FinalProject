@@ -22,15 +22,15 @@
         android:layout_width="270dp"
         android:layout_height="49dp"
         android:layout_marginStart="30dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:fontFamily="@font/bebas_neue"
         android:hint="EMAIL"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/et_v_m_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -46,86 +46,77 @@
         android:id="@+id/et_v_m_password"
         android:layout_width="270dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:fontFamily="@font/bebas_neue"
         android:hint="PASSWORD"
         android:inputType="text"
         android:password="true"
-        app:layout_constraintBottom_toTopOf="@+id/btn_v_m_signIn"
-        app:layout_constraintStart_toStartOf="@+id/et_v_m_email" />
+        app:layout_constraintStart_toStartOf="@+id/et_v_m_email"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="1.2"
-        android:scaleY="1.2"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_m_signIn"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_m_signIn"
         app:layout_constraintStart_toStartOf="@+id/btn_v_m_signIn"
         app:layout_constraintTop_toTopOf="@+id/btn_v_m_signIn"
-        app:srcCompat="@drawable/sign_in_button" />
+        app:srcCompat="@drawable/button_sign_in" />
 
     <Button
         android:id="@+id/btn_v_m_signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="44dp"
         android:width="120sp"
         android:alpha="0"
         android:text="SIGN IN"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="1.2"
-        android:scaleY="1.2"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_v_m_signUp"
         app:layout_constraintEnd_toEndOf="@+id/btn_v_m_signUp"
         app:layout_constraintStart_toStartOf="@+id/btn_v_m_signUp"
         app:layout_constraintTop_toTopOf="@+id/btn_v_m_signUp"
-        app:srcCompat="@drawable/sign_up_button" />
+        app:srcCompat="@drawable/button_signup" />
 
     <Button
         android:id="@+id/btn_v_m_signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
+        android:layout_marginTop="40dp"
         android:width="120sp"
         android:alpha="0"
         android:text="SIGN UP"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btn_v_m_signIn"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/bebas_neue"
-        android:text="OR"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_v_m_signUp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="253dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="434dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_v_m_signUp"
+        android:layout_width="259dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_handyman" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_m_signIn"
+        app:srcCompat="@drawable/txt_or" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

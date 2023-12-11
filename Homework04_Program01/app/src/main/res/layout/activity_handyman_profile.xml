@@ -27,16 +27,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/tape_measure" />
 
-    <ImageView
-        android:id="@+id/image_v_hs_home5"
-        android:layout_width="62dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home_button" />
-
     <EditText
         android:id="@+id/et_v_hp_description"
         android:layout_width="303dp"
